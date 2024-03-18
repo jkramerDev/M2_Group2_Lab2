@@ -1,5 +1,6 @@
 package template;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -43,6 +44,7 @@ public class TestHarness {
 		// 1) a call to search finds the user and displays their entries 
 		//(2) a call to search does not find the user & displays some detail illustrating same
 		TEST_Search(phonebookHander, sortedContacts, "Juan");
+		TEST_Search(phonebookHander, sortedContacts, "Ryan");
 		 
 
 	}
@@ -57,14 +59,17 @@ public class TestHarness {
 
 	
 	public static void TEST_Search(PhonebookHandler phonebookHandler, List<Contact> sortedContacts, String name) {
-		//TODO: use the sorted contacts and a name to search for.  
-	  
 		
 		System.out.println("\n -- Search results for " + name + " -- ");
 		List<PhonebookEntry> selectedEntries = phonebookHander.binarySearch(sortedContacts, name);
 		for (PhonebookEntry entry : selectedEntries) {
-			
-			System.out.println("Entries for " + name + " " +  entry.getType() + " " + entry.getPhoneNumber());
+	        System.out.println("Entries for " + entry.getName() + ":");
+	        Map<String, int[]> phoneNumbers = entry.getPhoneNumbers();
+	        for (Map.Entry<String, int[]> phoneNumberEntry : phoneNumbers.entrySet()) {
+	            String type = phoneNumberEntry.getKey();
+	            int[] numbers = phoneNumberEntry.getValue();
+	            System.out.println(type + ": " + Arrays.toString(numbers));
+	        }
 		}
 	}
 	
