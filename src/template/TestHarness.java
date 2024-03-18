@@ -15,7 +15,7 @@ public class TestHarness {
 
 
 	public static void main(String[] args) throws InterruptedException {
-		init();
+		/////////init();
 		
 		//TODO: 2 cases:
 		//display non equality using your overriden equals method
@@ -32,7 +32,7 @@ public class TestHarness {
 		TEST_hashcode(p2, p3);
 
 		//Create the phonebook handler
-		phonebookHander = new PhonebookHandler(phonebook);
+		/////////////phonebookHander = new PhonebookHandler(phonebook);
 		
 		//TODO
 		//call 
@@ -63,6 +63,7 @@ public class TestHarness {
 		System.out.println("\n -- Search results for " + name + " -- ");
 		List<PhonebookEntry> selectedEntries = phonebookHander.binarySearch(sortedContacts, name);
 		for (PhonebookEntry entry : selectedEntries) {
+<<<<<<< Updated upstream
 	        System.out.println("Entries for " + entry.getName() + ":");
 	        Map<String, int[]> phoneNumbers = entry.getPhoneNumbers();
 	        for (Map.Entry<String, int[]> phoneNumberEntry : phoneNumbers.entrySet()) {
@@ -70,6 +71,10 @@ public class TestHarness {
 	            int[] numbers = phoneNumberEntry.getValue();
 	            System.out.println(type + ": " + Arrays.toString(numbers));
 	        }
+=======
+			
+			//////////////System.out.println("Entries for " + name + " " +  entry.getType() + " " + entry.getPhoneNumber());
+>>>>>>> Stashed changes
 		}
 	}
 	
@@ -109,6 +114,7 @@ public class TestHarness {
 	 * 
 	 * @throws InterruptedException
 	 */
+	/*
 	public static void init() throws InterruptedException {
 
 		System.out.println("Building Contacts ....");
@@ -152,6 +158,6 @@ public class TestHarness {
 		phonebook.put(p4, p4.getPhonebookEntries());
 		phonebook.put(p5, p5.getPhonebookEntries());
 
-	}
+	}*/
 
 }

@@ -1,7 +1,10 @@
 package template;
 
+<<<<<<< Updated upstream
 import java.util.Map;
 
+=======
+>>>>>>> Stashed changes
 /**
  *   model a PhonebookEntry 
  *   
@@ -11,6 +14,7 @@ import java.util.Map;
  *   
  */
 
+<<<<<<< Updated upstream
 
 
 //this is just copied from the contact class as most of the same information is used in both
@@ -48,6 +52,10 @@ class PhonebookEntry{
 	    return null;
 	}
 	
+=======
+class PhonebookEntry{
+
+>>>>>>> Stashed changes
  
 }
 	

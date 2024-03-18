@@ -1,9 +1,12 @@
 package template;
 
+<<<<<<< Updated upstream
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+=======
+>>>>>>> Stashed changes
 /**
  * model a Contact 
  * Contact has a name & list of phonebook entries
@@ -14,6 +17,7 @@ import java.util.Map;
  * 
  */
 
+<<<<<<< Updated upstream
 class Contact {		
 	private String name;			//initializes name for contact 
 	private Map<String, int[]> phoneNumbers;			//initializes phone number map along with the type of number 
@@ -46,4 +50,25 @@ class Contact {
 		return null;
 	}
 	
+=======
+class Contact {
+	  private String name ;
+	  private int[] phonenumbers;
+	  private int i = 0;
+	  
+	  public Contact(String name) {
+		  this.name = name;
+	  }
+	  
+	  public void addNumber (int number) {
+		  phonenumbers[i] = number;
+		  i++;
+	  }
+	  
+	  public int[] getNumbers(){
+		return phonenumbers;
+	  }
+	  
+	  
+>>>>>>> Stashed changes
 }

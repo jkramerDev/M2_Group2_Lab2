@@ -12,6 +12,7 @@ import java.util.*;
  */
 
 public class PhonebookHandler implements iPhonebookHander{
+<<<<<<< Updated upstream
 	private List<Contact> contacts;			//initializes the list of contacts 
 	private Map<Contact, List<PhonebookEntry>> phonebook;			//initializes the map of numbers for each contact
 
@@ -33,10 +34,18 @@ public class PhonebookHandler implements iPhonebookHander{
             }
         }
         return contacts;		//return contacts list
+=======
+
+	@Override
+	public List<Contact> sortByName() {
+		// TODO Auto-generated method stub
+		return null;
+>>>>>>> Stashed changes
 	}
 
 	@Override
 	public List<PhonebookEntry> binarySearch(List<Contact> sortedContacts, String name) {
+<<<<<<< Updated upstream
 		int start = 0;			//set the start/min value
 	    int end = sortedContacts.size() - 1;			//set the end/max value
 	    
@@ -67,10 +76,15 @@ public class PhonebookHandler implements iPhonebookHander{
 	    System.out.println("ERROR: USER NOT FOUND.");		//if user isnt found this line will run
 
 		return foundList;
+=======
+		// TODO Auto-generated method stub
+		return null;
+>>>>>>> Stashed changes
 	}
 
 	@Override
 	public void display(List<Contact> sortedContacts) {
+<<<<<<< Updated upstream
 		for (Contact contact : sortedContacts) {		//for every contact in the contact list:
             System.out.println("Name: " + contact.getName());		//prints name of contact
             System.out.println("Phone Numbers:");
@@ -87,4 +101,11 @@ public class PhonebookHandler implements iPhonebookHander{
 	}
 
 	}
+=======
+		// TODO Auto-generated method stub
+		
+	}
+
+ 
+>>>>>>> Stashed changes
 }
